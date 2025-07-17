@@ -1,0 +1,19 @@
+<div class="history-wrapper">
+  <mat-card>
+    <mat-card-title>Chat History</mat-card-title>
+    <mat-card-content>
+      <div *ngFor="let m of chatStoreService.getChatHistory()">
+        <div class="user-message">
+          <p><strong>You:</strong> {{ m.user }}</p>
+        </div>
+        <div class="ai-message">
+          <p><strong>AI Reply:</strong> {{ m.ai }}</p>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+      @if(chatStoreService.getChatHistory().length > 0){
+      <button mat-button color="warn" (click)="clear()">Clear History</button>
+      }
+    </mat-card-content>
+  </mat-card>
+</div>

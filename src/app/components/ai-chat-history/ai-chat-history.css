@@ -1,0 +1,19 @@
+.history-wrapper {
+  padding: 20px;
+}
+
+.user-message {
+  background-color: #e8f5e9;
+  padding: 10px;
+  border: 1px solid #66bb6a;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.ai-message {
+  background-color: #e3f2fd;
+  padding: 10px;
+  border: 1px solid #42a5f5;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}

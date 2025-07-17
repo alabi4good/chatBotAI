@@ -1,0 +1,51 @@
+<div class="chat-container">
+  <mat-card>
+    <mat-card-title>Ask me Anything </mat-card-title>
+    <mat-card-content>
+      <!-- Chats goes here -->
+      <div *ngFor="let m of chats">
+        <div class="user-message">
+          <p><strong>You:</strong> {{ m.user }}</p>
+        </div>
+        <div class="ai-message">
+          <p><strong>AI Reply:</strong> {{ m.ai }}</p>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+
+      <!-- Input + Buttons -->
+      <div class="input-container">
+        <mat-form-field appearance="fill" class="input-field">
+          <input
+            matInput
+            [formControl]="userInput"
+            placeholder="Type your chat here"
+          />
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="sendChat()"
+          [disabled]="loading"
+        >
+          Send
+        </button>
+      </div>
+
+      <!-- Loading and Error -->
+      <div *ngIf="loading" class="loading-wrapper">
+        <mat-progress-spinner
+          mode="indeterminate"
+          diameter="30"
+        ></mat-progress-spinner>
+        <span>Processing a response...</span>
+      </div>
+
+      <div *ngIf="error" class="error-message">
+        <mat-icon color="warn">error_outline</mat-icon>
+        {{ error }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
