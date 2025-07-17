@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { InferenceClient } from '@huggingface/inference';
-import { environment } from '../environment';
+import { environment } from '../../../environment';
 import { HuggingFaceTokenFactory } from '../factory/huggingFace.factory';
 
 @Injectable({
