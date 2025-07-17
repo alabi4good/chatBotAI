@@ -2,7 +2,6 @@
   <mat-card>
     <mat-card-title>Ask me Anything </mat-card-title>
     <mat-card-content>
-      <!-- Chats goes here -->
       <div *ngFor="let m of chats">
         <div class="user-message">
           <p><strong>You:</strong> {{ m.user }}</p>
@@ -13,7 +12,6 @@
         <mat-divider></mat-divider>
       </div>
 
-      <!-- Input + Buttons -->
       <div class="input-container">
         <mat-form-field appearance="fill" class="input-field">
           <input
@@ -33,7 +31,6 @@
         </button>
       </div>
 
-      <!-- Loading and Error -->
       <div *ngIf="loading" class="loading-wrapper">
         <mat-progress-spinner
           mode="indeterminate"
