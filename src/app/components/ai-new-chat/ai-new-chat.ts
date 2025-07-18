@@ -57,7 +57,7 @@ export class NewChatComponent implements OnDestroy {
       )
       .subscribe({
         next: (res) => {
-          const reply = res.choices?.[0]?.message?.content || '[No response]'; // grab the response
+          const reply = res.message?.content || '[No response]'; // grab the response
           const msg: AI = { user: this.userInput.value as string, ai: reply };
           this.chats.push(msg);
           this.chatStorageService.addMessage(msg);

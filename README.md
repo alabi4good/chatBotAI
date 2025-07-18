@@ -15,4 +15,4 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Code Details
 
-Angular version used is Angular 20, I also used Angular material. I am using HuggingFace inference API for the AI API. To run the App locally, make sure Run npm install to install all dependencies
+Angular version used is Angular 20, I also used Angular material. I am using Puter.js as my AI API as it does not require any backend set up, no API keys or tokens which makes it perfect for this demo. I was using Hugging faces initially but it requires the need for authentication via tokens and i dont have back end support to save or retrieve these tokens from the API and its not the best practise to save our tokens locally in UI code. Hence, i adopted puter.js which does not require any authentication and perfect for this demo. To run the App locally, make sure you have node 20 installed on your local machine and Run npm install to install all dependencies.
